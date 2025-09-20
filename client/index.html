@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>AromTest — Магазин духов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+    <header class="header-dark">
+        <div class="container flex-row">
+            <div class="logo-block">
+                <svg class="logo" viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="14" stroke="#a78bfa" stroke-width="2"/>
+                    <path d="M16 10 C18 14, 22 14, 16 22 C10 14, 14 14, 16 10 Z" fill="#a78bfa"/>
+                </svg>
+                <h1>AromTest</h1>
+            </div>
+            <nav>
+                <a href="#" class="active">Главная</a>
+                <a href="#">Каталог</a>
+                <a href="#">Корзина</a>
+                <a href="#">О нас</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" style="display:none;">
+            <h2>Главная</h2>
+            <p>Добро пожаловать в AromTest — магазин духов!</p>
+        </section>
+        <section id="catalog">
+            <h2>Каталог духов</h2>
+            <div class="perfume-list">
+                <div class="perfume-card" data-id="0">
+                    <div class="card-img">
+                        <img src="img/parfum.png" alt="Парфюм">
+                    </div>
+                    <div class="card-content">
+                        <h3>Louis Vuitton Ombre Nomade</h3>
+                        <p class="brand">Louis Vuitton</p>
+                        <p class="notes">Герань, янтарь, шафран</p>
+                        <p class="desc">Восточно-древесный унисекс-аромат, композиция из герани, янтаря и шафрана.</p>
+                        <div class="card-bottom">
+                            <span class="price">2 000 ₽</span>
+                            <span class="volume">30ml</span>
+                            <span class="stock">В наличии: 5 шт</span>
+                            <button class="details-btn">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="perfume-card" data-id="1">
+                    <div class="card-img">
+                        <img src="img/parfum.png" alt="Парфюм">
+                    </div>
+                    <div class="card-content">
+                        <h3>Louis Vuitton L’Immensité</h3>
+                        <p class="brand">Louis Vuitton</p>
+                        <p class="notes">Грейпфрут, имбирь, бергамот</p>
+                        <p class="desc">Восточно-пряный мужской аромат, верхние нотки: грейпфрут, имбирь, бергамот.</p>
+                        <div class="card-bottom">
+                            <span class="price">2 000 ₽</span>
+                            <span class="volume">30ml</span>
+                            <span class="stock">В наличии: 1 шт</span>
+                            <button class="details-btn">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="perfume-card out-of-stock" data-id="2">
+                    <div class="card-img">
+                        <img src="img/parfum.png" alt="Парфюм">
+                    </div>
+                    <div class="card-content">
+                        <h3>Sospiro Accento</h3>
+                        <p class="brand">Sospiro</p>
+                        <p class="notes">Древесные, цветочные, фруктовые</p>
+                        <p class="desc">Древесный ориентальный, с вкраплениями свежих, цветочно-фруктовых оттенков.</p>
+                        <div class="card-bottom">
+                            <span class="price">1 700 ₽</span>
+                            <span class="volume">30ml</span>
+                            <span class="stock">Нет в наличии</span>
+                            <button class="details-btn" disabled>Нет в наличии</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="perfume-card" data-id="3">
+                    <div class="card-img">
+                        <img src="img/parfum.png" alt="Парфюм">
+                    </div>
+                    <div class="card-content">
+                        <h3>Nasomatto Black Afgano</h3>
+                        <p class="brand">Nasomatto</p>
+                        <p class="notes">Удовая древесина, кожа, кофе</p>
+                        <p class="desc">Композиция: удовая древесина, кожа, крепкий кофе.</p>
+                        <div class="card-bottom">
+                            <span class="price">1 700 ₽</span>
+                            <span class="volume">30ml</span>
+                            <span class="stock">В наличии: 1 шт</span>
+                            <button class="details-btn">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="perfume-card" data-id="4">
+                    <div class="card-img">
+                        <img src="img/parfum.png" alt="Парфюм">
+                    </div>
+                    <div class="card-content">
+                        <h3>Hermes Terre d'Hermes</h3>
+                        <p class="brand">Hermes</p>
+                        <p class="notes">Грейпфрут, минералы, апельсин, роза, кедр, перец, герань</p>
+                        <p class="desc">Раскрывается ароматами грейпфрута, минералов и апельсина. Роза, атласский кедр, перец и герань в «сердце» аромата.</p>
+                        <div class="card-bottom">
+                            <span class="price">2 300 ₽</span>
+                            <span class="volume">30ml</span>
+                            <span class="stock">В наличии: 1 шт</span>
+                            <button class="details-btn">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="perfume-card" data-id="5">
+                    <div class="card-img">
+                        <img src="img/parfum.png" alt="Парфюм">
+                    </div>
+                    <div class="card-content">
+                        <h3>Ajmal Amber Wood</h3>
+                        <p class="brand">Ajmal</p>
+                        <p class="notes">Яблоко, перечная мята, кардамон, лаванда, кедр, ирис</p>
+                        <p class="desc">Древесные оттенки, яблочные ноты, перец, кардамон, лаванда, кедр, корень ириса.</p>
+                        <div class="card-bottom">
+                            <span class="price">1 700 ₽</span>
+                            <span class="volume">30ml</span>
+                            <span class="stock">В наличии: 3 шт</span>
+                            <button class="details-btn">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cart" style="display:none;">
+            <h2>Корзина</h2>
+            <p>Ваша корзина пуста.</p>
+        </section>
+        <section id="about" style="display:none;">
+            <h2>О нас</h2>
+            <p>Информация о магазине AromTest.</p>
+        </section>
+    </main>
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-brand"></p>
+            <p id="modal-notes"></p>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+            <p id="modal-stock"></p>
+        </div>
+    </div>
+    <footer class="footer-dark">
+        <div class="container">
+            <p>&copy; 2025 AromTest. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
