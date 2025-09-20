@@ -1,0 +1,376 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #18181c;
+    margin: 0;
+    color: #fff;
+}
+
+.header-dark {
+    background: #18181c;
+    color: #fff;
+    padding: 0;
+    border-bottom: 1px solid #23232a;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.header-dark h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+nav a.active,
+nav a:hover {
+    color: #a78bfa;
+    border-bottom: 2px solid #a78bfa;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 0 32px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #6d28d9;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+/* Каталог духов */
+.perfume-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.perfume-card {
+  background: #23232a;
+  border: 1px solid #333;
+  border-radius: 18px;
+  padding: 0;
+  width: 270px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.3s, transform 0.2s;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.perfume-card:hover {
+  box-shadow: 0 8px 32px rgba(167,139,250,0.15);
+  border-color: #a78bfa;
+  transform: translateY(-6px) scale(1.03);
+}
+
+.card-img {
+    width: 100%;
+    height: 320px;
+    background: #18181c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    background: #18181c;
+    transition: transform 0.4s cubic-bezier(.4,2,.3,1), box-shadow 0.2s;
+}
+
+.perfume-card:hover .card-img img {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(167,139,250,0.18);
+}
+
+.card-content {
+    padding: 22px 20px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.perfume-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.brand {
+    color: #a78bfa;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.notes {
+    color: #c7d2fe;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.desc {
+    color: #ccc;
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+}
+
+.card-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.volume {
+    font-size: 1rem;
+    color: #a78bfa;
+    margin-left: 8px;
+}
+
+.stock {
+    font-size: 0.95rem;
+    color: #c7d2fe;
+    margin-left: 8px;
+}
+
+.details-btn {
+    background: #a78bfa;
+    color: #18181c;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: auto;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(167,139,250,0.08);
+}
+
+.details-btn:hover {
+    background: #fff;
+    color: #6d28d9;
+}
+
+.details-btn:disabled {
+    background: #333;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.out-of-stock {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: repeating-linear-gradient(135deg, #222, #18181c 10px);
+    border: 1px dashed #555;
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(24,24,28,0.85);
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background: #23232a;
+  margin: 7% auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 20px;
+  width: 370px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(167,139,250,0.18), 0 2px 12px rgba(255,255,255,0.08);
+  border: 1px solid #a78bfa;
+  animation: modalShow 0.3s;
+  color: #fff;
+}
+
+@keyframes modalShow {
+  from { opacity: 0; transform: scale(0.9);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+.close {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #a78bfa;
+}
+
+#modal-title {
+  font-size: 1.35rem;
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#modal-brand {
+    color: #a78bfa;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+#modal-notes {
+    color: #c7d2fe;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#modal-description {
+  margin-bottom: 18px;
+  color: #ccc;
+  font-size: 1.08rem;
+}
+
+#modal-price, #modal-stock {
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+  color: #aaa;
+}
+
+/* Заголовок каталога */
+#catalog h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+}
+
+#catalog h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #a78bfa;
+  border-radius: 2px;
+}
+
+footer {
+    background: #18181c;
+    color: #fff;
+    text-align: center;
+    padding: 28px 0 18px 0;
+    margin-top: 48px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-top: 1px solid #23232a;
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding: 0 12px;
+    }
+    .perfume-list {
+        gap: 1.2rem;
+    }
+    .perfume-card {
+        width: 100%;
+        min-width: 220px;
+        max-width: 350px;
+    }
+    .card-img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .flex-row {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 0;
+    }
+    nav {
+        gap: 18px;
+    }
+    main {
+        padding: 0 6px;
+    }
+    .perfume-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-dark {
+        padding: 18px 0 12px 0;
+    }
+}
